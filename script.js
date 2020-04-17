@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-var status = "Your status";
+var status = "Your status goes here";
 
 (async () => {
   const browser = await puppeteer.launch({
