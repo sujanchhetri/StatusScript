@@ -1,6 +1,5 @@
-//automatic login to twitter
 const puppeteer = require('puppeteer');
-var status = "It's raining outside";
+var status = "Your status";
 
 (async () => {
   const browser = await puppeteer.launch({
@@ -13,9 +12,9 @@ var status = "It's raining outside";
   await page.waitFor(1000);
 
   await page.waitFor('input[name="session[username_or_email]"]');
-  await page.type('input[name="session[username_or_email]"]', 'suJJJan',{delay: 100});
+  await page.type('input[name="session[username_or_email]"]', 'username',{delay: 100});
   await page.waitFor(1000);
-  await page.type('input[name="session[password]"]', 'Muskan@123',{delay: 100});
+  await page.type('input[name="session[password]"]', 'password',{delay: 100});
   await page.waitFor(500);
   await page.click('#react-root > div > div > div.css-1dbjc4n.r-1pi2tsx.r-13qz1uu.r-417010 > main > div > div > form > div > div:nth-child(8) > div > div');
   await page.waitFor(2000);
